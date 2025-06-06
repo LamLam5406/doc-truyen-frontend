@@ -18,7 +18,7 @@ const chuong = ref(null);
 
 onMounted(async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/api/chuong/${truyenId}`);
+    const res = await axios.get(`https://doc-truyen-backend.onrender.com/api/truyen`);
     chuong.value = res.data.find(c => c.id == chuongId);
   } catch (err) {
     console.error('Lỗi tải nội dung chương:', err);

@@ -18,7 +18,7 @@ const truyens = ref([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get('http://localhost:3000/api/truyen');
+    const res = await axios.get('https://doc-truyen-backend.onrender.com/api/truyen');
     truyens.value = res.data;
   } catch (err) {
     console.error('Lỗi tải truyện:', err);
