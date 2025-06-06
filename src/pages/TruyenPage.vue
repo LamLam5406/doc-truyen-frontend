@@ -21,7 +21,7 @@ const chuongs = ref([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get(`https://doc-truyen-backend.onrender.com/api/truyen`);
+    const res = await axios.get(`${API_BASE}/truyen`);
     chuongs.value = res.data;
   } catch (err) {
     console.error('Lỗi tải chương:', err);
